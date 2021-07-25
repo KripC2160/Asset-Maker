@@ -1,6 +1,6 @@
 extends Control
 
-
+export (float) var addValue = 2 
 
 onready var Main = Global.find_node_by_name(self, "Main")
 onready var texture_container = Global.find_node_by_name(self, "Textures")
@@ -69,9 +69,9 @@ func _on_AssistMode_toggled(button_pressed):
 
 
 func _on_layer_value_changed(value):
-	Main.layer.global_transform.origin.y = value
-	Main.get_node("Camera").global_transform.origin.y += value - Global.layer_no
-	Global.layer_no = value
+	Main.layer.global_transform.origin.y = value * addValue
+	Main.get_node("Camera").global_transform.origin.y += (value * addValue) - Global.layer_no
+	Global.layer_no = value * addValue
 
 
 func _on_snap_value_changed(value):
