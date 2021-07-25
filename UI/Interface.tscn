@@ -51,6 +51,7 @@ script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+addValue = 2.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -166,6 +167,7 @@ script = ExtResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+addValue = 2.0
 
 [node name="layer" type="SpinBox" parent="VBoxContainer/transf options/button container/layer"]
 margin_left = 43.1996
@@ -303,6 +305,9 @@ margin_top = -1.88776
 margin_right = -11.5661
 margin_bottom = 29.1122
 text = "Color :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CurrentTexture" type="TextureRect" parent="VBoxContainer/down/Panel/TabContainer/Color"]
 margin_left = 122.0
@@ -339,7 +344,7 @@ __meta__ = {
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/down/Panel/TabContainer/Color/VBoxContainer"]
 margin_right = 230.0
-margin_bottom = 290.0
+margin_bottom = 125.0
 rect_min_size = Vector2( 225, 125 )
 size_flags_vertical = 3
 custom_styles/bg = SubResource( 4 )
@@ -359,6 +364,8 @@ __meta__ = {
 margin_right = 66.0
 margin_bottom = 66.0
 rect_min_size = Vector2( 66, 66 )
+focus_mode = 1
+enabled_focus_mode = 1
 expand = true
 script = ExtResource( 1 )
 
@@ -374,15 +381,14 @@ __meta__ = {
 }
 
 [node name="CreateNew" type="Button" parent="VBoxContainer/down/Panel/TabContainer/Color/VBoxContainer"]
-margin_top = 294.0
+margin_top = 129.0
 margin_right = 230.0
-margin_bottom = 325.0
+margin_bottom = 160.0
 text = "Load New"
 
 [node name="Label" type="Label" parent="VBoxContainer/down/Panel/TabContainer/Color/VBoxContainer"]
-visible = false
 margin_top = 164.0
-margin_right = 229.0
+margin_right = 230.0
 margin_bottom = 325.0
 text = "It is advised to use an image of (1023x1024) as a texture
 A base UV texture is provided with the software. "
@@ -724,8 +730,8 @@ rect_min_size = Vector2( 190, 66.5 )
 window_title = "Select Export Path"
 mode_overrides_title = false
 access = 2
-current_dir = "/home/variable/Documents/Godot/Godot projects/Asset-Maker-master"
-current_path = "/home/variable/Documents/Godot/Godot projects/Asset-Maker-master/"
+current_dir = "/Users/user/Desktop/Asset-Maker-master"
+current_path = "/Users/user/Desktop/Asset-Maker-master/"
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
@@ -740,8 +746,8 @@ rect_min_size = Vector2( 190, 66.5 )
 mode_overrides_title = false
 access = 2
 filters = PoolStringArray( "*.asset" )
-current_dir = "/home/variable/Documents/Godot/Godot projects/Asset-Maker-master"
-current_path = "/home/variable/Documents/Godot/Godot projects/Asset-Maker-master/"
+current_dir = "/Users/user/Desktop/Asset-Maker-master"
+current_path = "/Users/user/Desktop/Asset-Maker-master/"
 __meta__ = {
 "_editor_description_": ""
 }
@@ -762,8 +768,8 @@ mode_overrides_title = false
 mode = 0
 access = 2
 filters = PoolStringArray( "*.png" )
-current_dir = "/home/variable/Documents/Godot/Godot projects/Asset-Maker-master"
-current_path = "/home/variable/Documents/Godot/Godot projects/Asset-Maker-master/"
+current_dir = "/Users/user/Desktop/Asset-Maker-master"
+current_path = "/Users/user/Desktop/Asset-Maker-master/"
 
 [node name="Alert" type="AcceptDialog" parent="Dialogs"]
 margin_right = 468.0

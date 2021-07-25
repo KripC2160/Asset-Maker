@@ -8,3 +8,4 @@ func _ready():
 func butt_pressed():
 	emit_signal("button_texture",texture_normal)
 	get_node("../../../../CurrentTexture").texture = texture_normal
+	

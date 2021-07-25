@@ -65,7 +65,6 @@ func _physics_process(_delta):
 			else:
 				if Input.is_action_just_pressed("left click"):
 					paint(cursor.global_transform, Global.paint_color, Global.paint_texture, CubeMesh.new())
-	
 		elif Global.mode == "Erase":
 			if Input.is_action_pressed("left click"):
 				paint(cursor.global_transform, Global.paint_color, Global.paint_texture, CubeMesh.new())

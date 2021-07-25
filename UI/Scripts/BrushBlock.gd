@@ -3,6 +3,8 @@ extends CSGMesh
 
 onready var cursor = get_node("../../Cursor")
 
+var albedo_mats = ["(1, 0, 0)", "(0, 1, 1)"] #first item is red, second is blue
+
 
 func start_up(block_transform :Transform):
 	global_transform = block_transform
@@ -13,6 +15,7 @@ func _process(_delta):
 	if Global.assist_mode:
 		if (global_transform.origin.distance_to(cursor.global_transform.origin)) <= 1.5:
 			if get_node_or_null("Node") == null:
+				#get_node(".").get_material().set_shader_param("albedo", albedo_mats[1])
 				var indicator = preload("res://Brushes/Basic/BrushPosition.tscn").instance()
 				add_child(indicator)
 				get_node("Node/Spatial").global_transform.origin = global_transform.origin
