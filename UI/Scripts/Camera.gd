@@ -49,3 +49,14 @@ func _process(delta):
 func _input(event):
 	if event is InputEventMouseMotion:
 		mouse_delta = event.relative
+		
+	if event is InputEventMouseButton: #zoom in and zoom out 
+		if event.is_pressed():
+			# zoom in
+			if event.button_index == BUTTON_WHEEL_UP:
+				if fov <= 100:
+					fov += speed
+			# zoom out
+			elif event.button_index == BUTTON_WHEEL_DOWN:
+				if fov >= 30:
+					fov -= speed
